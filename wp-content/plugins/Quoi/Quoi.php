@@ -52,10 +52,11 @@ $options = [
     'content' => 'the_content',
     'title' => 'the_title',
     'widget' => 'widget_text',
-    'trad'=> 'getttext',
+    'trad'=> 'gettext',
     'excerpt' => 'the_excerpt',
 
 ];
+
 
 
 
@@ -98,21 +99,22 @@ function quoi_plugin_settings_page() {
                 <input type="checkbox" name="content" id="content" value="1" <?php checked(1, get_option('content'), true); ?> />
             </div>
             <div class="preference">
-                <label label for="the_content">Modifie le titre des articles/pages.</label>
+                <label label for="title">Modifie le titre des articles/pages.</label>
                 <input type="checkbox" name="title" id="title" value="1" <?php checked(1, get_option('title'), true); ?> />
             </div>
             <div class="preference">
-                <label label for="the_content">Modifie le contenu des widgets de texte.</label>
+                <label label for="widget">Modifie le contenu des widgets de texte.</label>
                 <input type="checkbox" name="widget" id="widget" value="1" <?php checked(1, get_option('widget'), true); ?> />
             </div>
             <div class="preference">
-                <label label for="the_content">Modifie les chaînes de texte traduites.</label>
-                <input type="checkbox" name="trad" id="trad" value="1" <?php checked(1, get_option('trad'), true); ?> />
+                <label label for="mod_gettext">Modifie les chaînes de texte traduites.</label>
+                <input type="checkbox" name="gettext" id="gettext" value="1" <?php checked(1, get_option('gettext'), true); ?> />
             </div>
             <div class="preference">
-                <label label for="the_content">Modifie le texte des articles/pages.</label>
+                <label label for="article">Modifie le texte des articles/pages.</label>
                 <input type="checkbox" name="article" id="article" value="1" <?php checked(1, get_option('article'), true); ?> />
             </div>
+            
             
             <?php
             // Affiche les champs de sécurité pour les options
@@ -136,7 +138,7 @@ function quoi_plugin_register_settings() {
         'content',
         'title',
         'widget',
-        'trad',
+        'gettext',
         'article',
     ];
 
