@@ -1,12 +1,13 @@
 <?php
 /*
 Plugin Name: Quoi
-Description:  Remplace tout les quoi 
+Description:  Remplace tout les quoi par une petite blague :)
 Version: 1
 Requires PHP: 7.4
 Author: bdombry
 License: GPLv2 or later
 Text Domain: bdombry
+Tags: quoi, quoifeur, quoicoubeh, prank, plugin
 */
 
 
@@ -94,6 +95,15 @@ function quoi_plugin_settings_page() {
     <div class="wrap">
         <h1>Réglages du Plugin Quoi</h1>
         <form method="post" action="options.php">
+            <style>
+                .preference{
+                    display: flex;
+                    padding-bottom: 20px;
+                }
+                label{
+                    min-width: 25%;
+                }
+            </style>
             <div class="preference">
                 <label label for="the_content">Modifie le contenu des articles/pages.s</label>
                 <input type="checkbox" name="content" id="content" value="1" <?php checked(1, get_option('content'), true); ?> />
